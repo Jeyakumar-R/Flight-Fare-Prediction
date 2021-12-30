@@ -11,12 +11,8 @@ import pickle
 #import pandas as pd
 import streamlit as st
 from datetime import datetime, time
-from flask import Flask
 import pickle
-import sklearn
 
-
-app = Flask(__name__)
 # Done using Streamlit
 pickle_file = open('flight_price_xgb.pkl','rb')
 classifier = pickle.load(pickle_file)
