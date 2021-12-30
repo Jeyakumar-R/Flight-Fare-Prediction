@@ -13,6 +13,7 @@ import streamlit as st
 from datetime import datetime, time
 from flask import Flask
 import pickle
+import sklearn
 
 
 app = Flask(__name__)
