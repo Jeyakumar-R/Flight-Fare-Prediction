@@ -208,6 +208,7 @@ def flight_fare(source, destination, stops, Journey_day, Journey_month,
     return output
 
 def main():
+    st.title("Flight Fare Prediction")
     html_temp = """
         <div style="background-color:;padding:5px">
         <h2 style="color:white;text-align:center;">Flight Fare Prediction App </h2>
