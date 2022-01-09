@@ -250,7 +250,7 @@ def main():
 
     # Departure Min
     st.write('Select Departure Minutes : ')
-    Dept_min = st.slider("", 0, 60, 1)
+    Dept_min = st.slider("", 0, 60, 0)
     #st.write("Selected Departure Minute", Dept_min)
 
     # Airlines
@@ -277,7 +277,7 @@ def main():
 
     # Arrival Min
     st.write('Select Arrival Minute : ')
-    Arrival_min = st.slider("", 0, 60, 1, key="arrmin")
+    Arrival_min = st.slider("", 0, 60, 0, key="arrmin")
     #st.write("Selected Arrival Minute", Arrival_min)
 
     #Duration Hour
