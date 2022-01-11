@@ -2,7 +2,7 @@
 
 ### I have built a simple web app model which predicts the price of flight given the departure time , arrival time , date of journey , airline etc !
 
-### This was my year mini project 
+### This was my final year mini project 
 
 The dataset for the project is taken from Kaggle, and it is a time-stamped dataset so, while building the model, extensive pre-processing was done on the dataset especially on the date-time columns to finally come up with a ML model which could effectively predict airline fares across various Indian Cities. 
 The dataset had many features which had to pre-processed and transformed into new parameters for a cleaner and simple web application layout to predict the fares. 
