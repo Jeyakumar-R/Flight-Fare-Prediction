@@ -17,7 +17,7 @@ import pickle
 
 app = Flask(__name__)
 # Done using Streamlit
-pickle_file = open("D:\\flight_price_xgb.pkl",'rb') 
+pickle_file = open("flight_price_xgb.pkl",'rb') 
 classifier = pickle.load(pickle_file)
 
 def welcome():
