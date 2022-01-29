@@ -1,6 +1,6 @@
 # Flight-Fare-Prediction
 
-### I have built a simple web app model which predicts the price of flight given the departure time , arrival time , date of journey , airline etc !
+### I have built a simple web app model which predicts the price of flight ticket given the departure time , arrival time , date of journey , airline etc !
 
 ### This was my final year mini project 
 
