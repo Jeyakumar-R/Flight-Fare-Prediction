@@ -189,13 +189,8 @@ def flight_fare(source, destination, Dept_hour, Dept_min, airlines, Arrival_hour
     return output
 
 def main():
-    html_temp = """
-        <div style="background-color:;padding:5px">
-        <h2 style="color:white;text-align:center;">Flight Fare Prediction App </h2>
-        </div>
-        """
-    st.markdown(html_temp, unsafe_allow_html=True)
-
+    st.title('Flight Fare Prediction App')
+    
     #Select source
     st.write('Select Source of Journey : ')
     source = st.selectbox('',('Chennai', 'Delhi', 'Kolkata', 'Mumbai', 'Banglore'))
