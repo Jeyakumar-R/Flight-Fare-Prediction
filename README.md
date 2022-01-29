@@ -31,6 +31,8 @@ Additional_Info: Additional information about the flight
 Price: The price of the ticket
 
 # Sample Image
+![Untitled](https://user-images.githubusercontent.com/65072016/151655295-caceb310-f5de-4a8b-a96f-5b314f8e79e6.jpg)
+![Untitled1](https://user-images.githubusercontent.com/65072016/151655300-dd7ea228-fdab-4087-87ee-e9875528151f.jpg)
 
 # Demo Link
 ### https://flight-fare-prediction-st.herokuapp.com/
