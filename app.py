@@ -20,8 +20,6 @@ app = Flask(__name__)
 pickle_file = open("flight_price_xgb.pkl",'rb') 
 classifier = pickle.load(pickle_file)
 
-def welcome():
-    return "Welcome All"
 
 def flight_fare(source, destination, Dept_hour, Dept_min, airlines, Arrival_hour, Arrival_min, Dur_hr, Dur_min):
 
