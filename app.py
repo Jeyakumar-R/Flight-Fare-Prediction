@@ -21,7 +21,7 @@ pickle_file = open("flight_price_xgb.pkl",'rb')
 classifier = pickle.load(pickle_file)
 
 
-def flight_fare(source, destination, Dept_hour, Dept_min, airlines, Arrival_hour, Arrival_min, Dur_hr, Dur_min):
+def flight_fare(source, stops, destination, Dept_hour, Dept_min, airlines, Arrival_hour, Arrival_min, Dur_hr, Dur_min):
 
     #Source -'Chennai', 'Delhi', 'Kolkata', 'Mumbai'
     #Banglore = 0 (not in column)
@@ -157,9 +157,21 @@ def flight_fare(source, destination, Dept_hour, Dept_min, airlines, Arrival_hour
         a_SpiceJet = 0
         a_Trujet = 0
         a_Vistara = 0
+        
+    if (stops == 'Non Stop') :
+        stop_val = 4
+    elif (stops == '1 Stop') :
+        stop_val = 0
+    elif (stops == '2 Stop') :
+        stop_val = 1
+    elif (stops == '3 Stop') :
+        stop_val = 2
+    else:
+        stop_val = 3
 
 
     prediction = classifier.predict([[
+        stop_val,
         Dept_hour,
         Dept_min,
         Dur_hr,
@@ -200,6 +212,11 @@ def main():
                                ('Cochin', 'Delhi', 'Hyderabad', 'Kolkata', 'New_Delhi', 'Banglore'))
     #st.write('You selected:', destination)
 
+    # Select Stopages
+    st.write('Select How many stops you want in your Journey : ')
+    stops = st.selectbox('',
+                         ('Non Stop', '1 Stop', '2 Stop', '3 Stop', '4 Stop'))
+    #st.write('You selected:', stops)
 
     # Departure Hour
     st.write('Select Departure Hour : ')
@@ -239,7 +256,7 @@ def main():
 
     fare_price = ''
     if st.button('Predict'):
-            fare_price = flight_fare(source, destination, Dept_hour, Dept_min, airlines, Arrival_hour, Arrival_min, Dur_hr, Dur_min)
+            fare_price = flight_fare(source, destination, stops, Dept_hour, Dept_min, airlines, Arrival_hour, Arrival_min, Dur_hr, Dur_min)
 
             st.success('The Predicted Flight Fare is  {}'.format(fare_price))
             
